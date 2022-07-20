@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Pagina Inicial</h1>
+    <div>
+        <p>
+            Neste Sistema acontece a adição de usuarios, sendo possivel também ver a tabela de usuarios ja adicionados 
+        </p>
+
+        @*<a class="nav-link" asp-area="" asp-controller="Usuarios" asp-action="Index">Lista Usuarios</a>*@
+        <p class="text-create-new-user">
+            <a asp-controller="Usuarios" asp-action="Create" class="form-btn btn-create-new">Criar um Novo</a>
+        </p>
+
+    </div>
+
+
+
+    <p>Veja mais sobre .NET <a href="https://docs.microsoft.com/aspnet/core">clique aqui</a>.</p>
+</div>

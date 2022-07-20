@@ -1,0 +1,31 @@
+﻿@model WebMvcMysql.Models.Usuario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="Titles-inf-user">
+    <h1>Deletar</h1>
+    <h4>Usuario</h4>
+
+    <h3>Tens certeza que deseja deletar este usuario</h3>
+
+</div>
+<div>
+    <div class="details-tables-names">
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+        </dl>
+    </div>
+    <div class="form-action-itens-bottom">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="form-btn delete-btn" />
+            <a asp-action="Index" class="back-list w-100">Volar a Lista</a>
+        </form>
+    </div>
+</div>

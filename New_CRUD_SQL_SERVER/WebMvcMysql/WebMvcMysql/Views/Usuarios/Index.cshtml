@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebMvcMysql.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Usuarios</h1>
+
+<table class="table-lista-usuarios table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="form-btn edit-btn">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="form-btn details-btn">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="form-btn delete-btn">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<p class="text-create-new-user">
+    <a asp-action="Create" class="form-btn btn-create-new">Criar um Novo</a>
+</p>

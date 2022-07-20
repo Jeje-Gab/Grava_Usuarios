@@ -1,0 +1,26 @@
+﻿@model WebMvcMysql.Models.Usuario
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<div class="Titles-inf-user">
+    <h1>Detalhes</h1>
+    <h4>Usuario</h4>
+</div>
+
+
+<div class="details-tables-names">
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+    </dl>
+</div>
+<div class="details-actions">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="form-btn edit-btn">Edit</a> 
+    <a asp-action="Index" class="back-list w-100">Voltar a Lista</a>
+</div>
